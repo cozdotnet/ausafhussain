@@ -1,0 +1,26 @@
+.table {
+  padding: 20px;
+}
+
+h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border: 1px solid black;
+  border-radius: 4px !important;
+}
+
+.actions {
+}
+
+.delete-action,
+.edit-action {
+  cursor: pointer;
+}
+.delete-action:hover,
+.edit-action:hover {
+  color: #563d7c;
+}

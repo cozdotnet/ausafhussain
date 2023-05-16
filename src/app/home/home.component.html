@@ -1,0 +1,46 @@
+<navbar></navbar>
+<div class="table">
+  <h5>All Pet Schedules</h5>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Medical Name Column -->
+    <ng-container matColumnDef="medicalname">
+      <th mat-header-cell *matHeaderCellDef>Medical Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.medicalname }}</td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.date | date : "EE d LLL YYYY" }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let element; let i = index">
+        <div class="actions">
+          <!-- <mat-icon fontIcon="edit" class="edit-action" (click)="EditPet(i)"
+            >Edit</mat-icon
+          > -->
+          <mat-icon
+            fontIcon="delete"
+            class="delete-action"
+            (click)="DeletePet(i)"
+            >Delete</mat-icon
+          >
+        </div>
+        <!-- <button>Delete</button> -->
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

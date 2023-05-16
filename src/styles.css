@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  background: #563d7c;
+  color: white;
+  transition: all 0.4s ease;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: none;
+  color: black;
+}
+
+h5 {
+  font-size: 25px !important;
+  margin: 10px;
+}
